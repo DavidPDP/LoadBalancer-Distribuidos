@@ -47,7 +47,7 @@ enabled=1
 ```sh
 # cd /etc/nginx/nginx.conf
 ```
-2.Eliminamos el contenido del archivo predeterminado y agregamos el siguiente texto. Este texto permite 
+2.Eliminamos el contenido del archivo predeterminado y agregamos el siguiente texto. Este texto permite configurar los servidores a los cuales el balanceador redirigirá y el puerto del balanceador donde eschuará e interceptará las peticiones.
 ```txt
 worker_processes  1;
 events {
