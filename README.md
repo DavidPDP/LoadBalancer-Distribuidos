@@ -14,6 +14,11 @@
 * Integrar servicios ejecutandose en nodos distintos
 
 ##Supuestos
-Se ha realizado la instalación de vagrant y del box del sistema operativo CentOS 6.5
+<p align ='justify'> Se ha realizado la instalación de vagrant y del box del sistema operativo CentOS 6.5. También se ha puesto el box apuntar al mirror de CentOS y no a uno local.
+##Desarrollo
+<p align ='justify'>Para el desarrollo del problema se deben automatizar una serie de comandos, los siguientes son los comandos identificados para futura automatización</p>
+###Instalación de Nginx
+<p align ='justify'>Para el servidor que tomará el rol de balanceador de cargas se procederá a instalar el Nginx, el cual es un servidor web/proxy que permite múltiples funcionalidades, entre estas la funcionalidad de balanceo de carga. Para instalar Nginx se tiene que proceder a correr los siguientes comandos: </p>
+```bash
 
-
+```
