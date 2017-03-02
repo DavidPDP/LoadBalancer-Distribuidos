@@ -47,8 +47,28 @@ enabled=1
 ```sh
 # cd /etc/nginx/nginx.conf
 ```
+2.Eliminamos el contenido del archivo predeterminado y agregamos el siguiente texto. Este texto permite 
+```txt
+worker_processes  1;
+events {
+   worker_connections 1024;
+}
 
+http {
+    upstream servers {
+         server 192.168.131.3;
+         server 192.168.131.4;
+    }
 
+    server {
+        listen 8080;
+
+        location / {
+              proxy_pass http://servers;
+        }
+    }
+}
+```
 
 
 
