@@ -11,4 +11,5 @@
 * Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables
 * Integrar servicios ejecutandose en nodos distintos
 
-
+##Supuestos
+Se ha realizado la instalación de vagrant y del box del sistema operativo CentOS 6.5
