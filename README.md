@@ -20,5 +20,5 @@
 ###Instalación de Nginx
 <p align ='justify'>Para el servidor que tomará el rol de balanceador de cargas se procederá a instalar el Nginx, el cual es un servidor web/proxy que permite múltiples funcionalidades, entre estas la funcionalidad de balanceo de carga. Para instalar Nginx se tiene que proceder a correr los siguientes comandos: </p>
 ```bash
-vi nginx.repo
+# vi nginx.repo
 ```
