@@ -21,17 +21,21 @@
 <p align ='justify'>Para el servidor que tomará el rol de balanceador de cargas se procederá a instalar el Nginx, el cual es un servidor web/proxy que permite múltiples funcionalidades, entre estas la funcionalidad de balanceo de carga. Para instalar Nginx se tiene que proceder a correr los siguientes comandos: </p>
 1.Accedemos hasta la carpeta de repositorios de yum
 ```sh
-cd /etc/yum.repos.d
+# cd /etc/yum.repos.d
 ```
 2.Creamos un nuevo archivo de repositorio para Nginx
 ```sh
 # vi nginx.repo
 ```
-3.Se agrega las siguientes líneas que permiten configurar la ruta donde se procederá a descargar el nginx, específicando el sistema operativo, la versión y la arquitectura del computador. 
+3.Se agrega las siguientes líneas que permiten configurar la ruta donde se procederá a descargar el nginx, específicando el sistema operativo, la versión y la arquitectura del computador. Luego de esto, se procede a guardar el archivo. 
 ```txt
 [nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
 gpgcheck=0
 enabled=1
+```
+4.Finalmente se instala Nginx por medio de yum.
+```sh
+# yum install nginx
 ```
