@@ -25,7 +25,7 @@ cd /etc/yum.repos.d
 ```
 2.Creamos un nuevo archivo de repositorio para Nginx
 ```bash
-# vi nginx.repo
+vi nginx.repo
 ```
 3.Se agrega las siguientes líneas que permiten configurar la ruta donde se procederá a descargar el nginx, específicando el sistema operativo, la versión y la arquitectura del computador. 
 ```txt
