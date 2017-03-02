@@ -44,6 +44,9 @@ enabled=1
 ###Configurando Nginx como balanceador de carga
 <p align='justify'>Una vez instalado Nginx se debe proceder a configurarlo en su funcionalidad de balanceador de carga, para esto se debe proceder con los siguientes pasos: </p>
 1.Se accede al archivo de configuración
+```sh
+# cd /etc/nginx/nginx.conf
+```
 
 
 
