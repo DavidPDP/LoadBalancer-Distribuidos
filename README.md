@@ -39,11 +39,11 @@ enabled=1
 ```sh
 # yum install nginx
 ```
+![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/captura1.png)
+
 ###Configurando Nginx como balanceador de carga
 <p align='justify'>Una vez instalado Nginx se debe proceder a configurarlo en su funcionalidad de balanceador de carga, para esto se debe proceder con los siguientes pasos: </p>
-1. Acceder 
-2. Hola
-
+1.Se accede al archivo de configuración
 
 
 
