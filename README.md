@@ -69,6 +69,18 @@ http {
     }
 }
 ```
+4.Abrir el puerto 8080 por el cual asignamos el servicio de balanceador de carga.
+```sh
+# iptables -I INPUT -p tcp --dport 8080 --syn -j ACCEPT
+```
+5.Guardar los cambios del servicio de iptables.
+```sh
+# service iptables save
+```
+5.Reiniciar el servicio de iptables para que puede actualizar los cambios.
+```sh
+# service iptables restart
+```
 3.Por último se procede a iniciar el servicio de Nginx.
 ```sh
 # service nginx start
