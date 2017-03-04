@@ -5,9 +5,9 @@ send -- "\r"
 expect "n]" # Set root password? 
 send -- "y\r"
 expect ":" # New password:
-send -- "<%=@password%>\r"
+send -- "distribuidos\r"
 expect ":" # Re-enter new password:
-send -- "<%=@password%>\r"
+send -- "distribuidos\r"
 expect "n]" # Remove anonymous users? 
 send -- "n\r"
 expect "n]" # Disallow root login remotely?

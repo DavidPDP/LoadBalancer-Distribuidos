@@ -17,12 +17,10 @@ end
 template '/var/www/html/index.php' do
   source 'index.html.erb'
   variables(
-    titulo_ppal: node[:web][:titulo],
-    user_web: node[:web][:user],
-    ip_web: node[:web][:ip],
-    password_web: node[:web][:password]
+    titulo_ppal: node[:web][:titulo]
   ) 
 end
+
 template '/var/www/html/select.php' do
   source 'select.php.erb'
   variables(
@@ -31,8 +29,13 @@ template '/var/www/html/select.php' do
     password_web: node[:web][:password] 
   )
 end
+
 cookbook_file '/var/www/html/.htaccess' do
-  source 'htaccess'
+  source '.htaccess'
   mode 0666
 end 
 
+cookbook_file '/var/www/html/findIP.php' do
+  source 'findIP.php'
+  mode 0666
+end

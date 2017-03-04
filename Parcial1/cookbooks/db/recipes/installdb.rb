@@ -13,11 +13,8 @@ end
 
 package 'expect'
 
-template '/tmp/configure_mysql.sh' do
-  source 'configure_mysql.sh.erb'
-  variables(
-    password: node[:db][:password]
-  )
+cookbook_file '/tmp/configure_mysql.sh' do
+  source 'configure_mysql.sh'
   mode 0777
 end
 
@@ -42,6 +39,6 @@ end
 bash 'create schema' do
   cwd '/tmp'
   code <<-EOH
-    cat create_schema.sql | mysql -u root -pqwerty
+    cat create_schema.sql | mysql -u root -pdistribuidos
   EOH
 end
