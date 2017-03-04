@@ -1,0 +1,70 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.ssh.insert_key = false
+  
+  config.vm.define :centos_web1 do |web|
+    web.vm.box = "CentOS64U"
+    web.vm.network "private_network", ip: "192.168.33.15"
+    web.vm.network "public_network", bridge: "enp5s0", ip: "192.168.131.3"
+    web.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos-web1" ]
+    end
+    config.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "cookbooks"
+      chef.json = {
+          "web" => {
+             "titulo" => 'Servidor 1'
+          }
+      }
+      chef.add_recipe "web"
+    end
+  end
+  $Server2 = 'Server Web 2'
+  config.vm.define :centos_web2 do |web|
+    web.vm.box = "CentOS64U"
+    web.vm.network "private_network", ip: "192.168.33.16"
+    web.vm.network "public_network", bridge: "enp5s0", ip: "192.168.131.4"
+    web.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos-web2" ]
+    end
+    config.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "cookbooks"
+      chef.json = {
+          "web" => {
+             "titulo" => 'Servidor 2'
+          }
+      }
+      chef.add_recipe "web"
+    end
+  end
+
+  config.vm.define :centos_db do |db|
+      db.vm.box = "CentOS64U"
+      db.vm.network "private_network", ip: "192.168.33.17"
+      db.vm.network "public_network", bridge: "enp5s0", ip: "192.168.131.5"
+      db.vm.provider :virtualbox do |vb|
+        vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos-db" ]
+      end
+      config.vm.provision :chef_solo do |chef|
+        chef.cookbooks_path = "cookbooks"
+        chef.add_recipe "db"
+      end
+  end
+
+  config.vm.define :centos_balancer do |bal|
+	      bal.vm.box = "CentOS64"
+      bal.vm.network "private_network", ip: "192.168.33.18"
+      bal.vm.network "public_network", bridge: "enp5s0", ip: "192.168.131.6"
+      bal.vm.provider :virtualbox do |vb|
+        vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos-balancer" ]
+      end
+      config.vm.provision :chef_solo do |chef|
+        chef.cookbooks_path = "cookbooks"
+        chef.add_recipe "balancer"
+      end
+  end
+end
