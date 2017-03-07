@@ -95,7 +95,7 @@ vagrant init
 * Describir los tipos de máquina y recursos que necesita para ejecutar el proyecto.
 
 <p align="justify"> A continuación se presenta el VagrantFile del problema</p>
-<a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/Parcial1/Vagrantfile"><b><u>Vista del VagrantFile</u></b></a>
+<a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/Parcial1/Vagrantfile"><b>Vista del VagrantFile</b></a>
 <p align="justify"> En el vagrant se puede apreciar diferentes cosas</p>
 
 
