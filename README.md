@@ -102,6 +102,25 @@ http {
 
 <a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/tree/master/Parcial1/cookbooks"><b>Vista de los cookbooks</b></a>
 
+###Aprovisionamiento
+<p align="justify">Ya desarrollado la estructura de los cookbooks y configurado el archivo VagrantFile, se deben seguir los siguientes pasos para poder aprovisionar la infraestructura</p>
+
+####Primero: Destruir Máquinas y Recursos
+```sh
+# vagrant destroy -f
+```
+<p align="justify">Este comando permite detener y destruir todas las máquinas que están siendo gestionadas por Vagrant desde el root(VagrantFile), al igual que sus recursos. Si es la primera vez que se va a realizar el aprovisionamiento, se puede obviar este paso, pero es recomendable hacerlo. La opción "-f" sirve para que el sistema no pregunte la confirmación antes de destruir la máquina.</p>
+####Segundo: Levantar Máquinas y Aprovisionarlas
+```sh
+# vagrant up
+```
+<p align="justify">Este comando permite crear y configurar las máquinas virtuales acorde a la configuración del VagrantFile. Una vez ejecutado, procederá a crear y a instalar cada uno de los servicios que se le indicó por medio de la herramienta Chef. Finalmente se tiene toda la arquitectura solicitada.</p>
+
+
+
+
+
+
 
 
 
