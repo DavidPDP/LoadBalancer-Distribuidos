@@ -100,6 +100,7 @@ http {
 
 ![alt text]()
 
+<a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/tree/master/Parcial1/cookbooks"><b>Vista de los cookbooks</b></a>
 
 
 
