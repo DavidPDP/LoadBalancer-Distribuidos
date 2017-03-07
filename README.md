@@ -93,8 +93,8 @@ vagrant init
 <p align="justify"> El archivo VagrantFile tiene dos propósitos principales</p>
 * Marcar el directorio raíz del proyecto.
 * Describir los tipos de máquina y recursos que necesita para ejecutar el proyecto.
-
-
+<p align="justify"> A continuación se presenta el VagrantFile del problema</p>
+<a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/Parcial1/Vagrantfile"> Vista del VagrantFile </a>
 
 
 
