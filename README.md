@@ -116,7 +116,10 @@ http {
 ```
 <p align="justify">Este comando permite crear y configurar las máquinas virtuales acorde a la configuración del VagrantFile. Una vez ejecutado, procederá a crear y a instalar cada uno de los servicios que se le indicó por medio de la herramienta Chef. Finalmente se tiene toda la arquitectura solicitada.</p>
 
+##Problemas
+<p align="justify">El primer problema fue la instalación de servicios que no se encontraban alojados en el mirror local, esto debido a que el box utilizado apuntaba directamente al mirror local. La solución a este problema fue aprovisionar el servidor del balanceador con la box original, que accedía a mirrors remotos (Internet). Se propuso esa solución, debido a que el mirror local es compartido y no se quería dañar la configuración, lo cual afectaría el trabajo de todo el curso.
 
+El segundo problema </p>
 
 
 
