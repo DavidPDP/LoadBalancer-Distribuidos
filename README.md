@@ -119,7 +119,7 @@ http {
 ##Problemas
 <p align="justify">El primer problema fue la instalación de servicios que no se encontraban alojados en el mirror local, esto debido a que el box utilizado apuntaba directamente al mirror local. La solución a este problema fue aprovisionar el servidor del balanceador con la box original, que accedía a mirrors remotos (Internet). Se propuso esa solución, debido a que el mirror local es compartido y no se quería dañar la configuración, lo cual afectaría el trabajo de todo el curso.
 
-El segundo problema </p>
+El segundo problema fue escoger la tecnología para llevar acabo el balanceador de cargas. Entre las tecnologías se encontró Apache, Balanceador Web Pound y Nginx. Las dos primeras se llevó a cabo los tutoriales y se siguió la documentación pero no dieron resultados concretos debido a la complejidad de sus archivos de configuración. Esta complejidad radicaba en el tamaño del archivo. Se iba a seguir intentado con estas dos primeras tecnologías, pero en medio de la búsqueda se encontró que una de las funcionalidades de Nginx era balanceador de carga y con esta tecnología se había tenido un primer acercamiento en el curso, por tal motivo se decidió investigar un poco más, encontrando un <a href="https://www.youtube.com/watch?v=XdHrywooTi0"><b>tutorial</b></a> fácil donde mostraba que el archivo de configuración para la funcionalidad era relativamente simple. </p>
 
 
 
