@@ -98,7 +98,7 @@ http {
 <a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/Parcial1/Vagrantfile"><b>Vista del VagrantFile</b></a>
 <p align="justify"> En el vagrant se puede apreciar diferentes cosas. Lo primero son cuatro definiciones de máquinas virtuales, a cada una se le asigna una ip privada y una interfaz tipo bridge. El aprovisionamiento se realiza con la herramienta Chef, que permite aprovisionar las máquinas. En el VagrantFile chef apunta al directorio cookbooks y agrega los diferentes tipos de recipes. En el caso de los servidores web, ambos apuntan al recipe web, esto se debe a que ambos tienen la misma configuración excepto las variables que se especifican en el chef.json (variables desde el VagrantFile). Por la máquina centos_balancer es la única que se sube con el box de centos normal mientras que lass otras con el centos update, el cual está configurado para acceder a los recursos a un mirror local en la red donde se está trabajando.</p>
 
-![alt text]()
+![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/tree.png)
 
 <a href="https://github.com/DavidPDP/LoadBalancer-Distribuidos/tree/master/Parcial1/cookbooks"><b>Vista de los cookbooks</b></a>
 
@@ -119,9 +119,9 @@ http {
 ###Evidencias
 A continuación se muestra la redirección a los dos servidores web, desde la recepción de la solicitud del servidor de balanceador de carga.
 
-![alt text]()
+![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/prueba1.png)
 
-![alt text]()
+![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/prueba2.png)
 
 Como se puede observar efectivamente se está redireccionando a ambos servidores y estos a su vez están realizando las consultas a la base de datos. 
 
