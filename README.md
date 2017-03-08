@@ -85,7 +85,7 @@ http {
 ```sh
 # service nginx start
 ```
-##
+##Automatización
 <p align = "justify"> Una vez identificados los anteriores comandos, debemos proceder automatizarlos. Para eso se trabajará con la herramienta Vagrant, la cual permite la creación y configuración de entornos de desarrollo virtualizados. Esta herramienta después de instalada permite por medio del siguiente comando, crear un archivo llamado VagrantFile</p>
 ```sh
 # vagrant init
