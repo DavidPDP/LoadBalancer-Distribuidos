@@ -7,11 +7,11 @@ if (!$con)
 
 mysql_select_db("database1", $con);
 
-$result = mysql_query("SELECT * FROM example");
+$result = mysql_query("SELECT * FROM <%=@table%>");
 
 while($row = mysql_fetch_array($result))
   {
-  echo $row['name'] . " " . $row['age'];
+  echo $row['<%=@attribute1%>'] . " " . $row['<%=@attribute2%>'];
   echo "<br />";
   }
 

@@ -17,7 +17,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.cookbooks_path = "cookbooks"
       chef.json = {
           "web" => {
-             "titulo" => 'Servidor 1'
+             "titulo" => 'Servidor 1',
+             "table" => 'example1',
+             "attribute1" => 'name',
+             "attribute2" => 'age'
           }
       }
       chef.add_recipe "web"
@@ -35,7 +38,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.cookbooks_path = "cookbooks"
       chef.json = {
           "web" => {
-             "titulo" => 'Servidor 2'
+             "titulo" => 'Servidor 2',
+             "table" => 'example2',
+             "attribute1" => 'place',
+             "attribute2" => 'description'
           }
       }
       chef.add_recipe "web"

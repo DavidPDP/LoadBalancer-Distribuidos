@@ -26,7 +26,10 @@ template '/var/www/html/select.php' do
   variables(
     user_web: node[:web][:user],
     ip_web: node[:web][:ip],
-    password_web: node[:web][:password] 
+    password_web: node[:web][:password], 
+    table: node[:web][:table],
+    attribute1: node[:web][:attribute1],
+    attribute2: node[:web][:attribute2]
   )
 end
 
