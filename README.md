@@ -116,6 +116,15 @@ http {
 ```
 <p align="justify">Este comando permite crear y configurar las máquinas virtuales acorde a la configuración del VagrantFile. Una vez ejecutado, procederá a crear y a instalar cada uno de los servicios que se le indicó por medio de la herramienta Chef. Finalmente se tiene toda la arquitectura solicitada.</p>
 
+###Evidencias
+A continuación se muestra la redirección a los dos servidores web, desde la recepción de la solicitud del servidor de balanceador de carga.
+
+![alt text]()
+
+![alt text]()
+
+Como se puede observar efectivamente se está redireccionando a ambos servidores y estos a su vez están realizando las consultas a la base de datos. 
+
 ##Problemas
 <p align="justify">El primer problema fue la instalación de servicios que no se encontraban alojados en el mirror local, esto debido a que el box utilizado apuntaba directamente al mirror local. La solución a este problema fue aprovisionar el servidor del balanceador con la box original, que accedía a mirrors remotos (Internet). Se propuso esa solución, debido a que el mirror local es compartido y no se quería dañar la configuración, lo cual afectaría el trabajo de todo el curso.<br><br>
 El segundo problema fue escoger la tecnología para llevar acabo el balanceador de cargas. Entre las tecnologías se encontró Apache, Balanceador Web Pound y Nginx. Las dos primeras se llevó a cabo los tutoriales y se siguió la documentación pero no dieron resultados concretos debido a la complejidad de sus archivos de configuración. Esta complejidad radicaba en el tamaño del archivo. Se iba a seguir intentado con estas dos primeras tecnologías, pero en medio de la búsqueda se encontró que una de las funcionalidades de Nginx era balanceador de carga y con esta tecnología se había tenido un primer acercamiento en el curso, por tal motivo se decidió investigar un poco más, encontrando un <a href="https://www.youtube.com/watch?v=XdHrywooTi0"><b>tutorial</b></a> fácil donde mostraba que el archivo de configuración para la funcionalidad era relativamente simple.<br><br>
