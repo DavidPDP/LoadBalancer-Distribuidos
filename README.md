@@ -3,21 +3,21 @@
 <b>Código:</b>A00309824 <br>
 <b>Repositorio:</b> https://github.com/DavidPDP/LoadBalancer-Distribuidos
 
-##Problema
+## Problema
 <p align ='justify'>Deberá realizar el aprovisionamiento de un ambiente compuesto por los siguientes elementos: un servidor encargado de realizar balanceo de carga, dos servidores web (puede emplear apache+php o crear un servicio web con el lenguaje de su preferencia) y un servidor de base de datos (postgresql o mysql). Se debe probar el funcionamiento del balanceador a través de una aplicación web que realice consultas a la base de datos a través de los servidores web (mostrar visualmente cual servidor web atiende la petición)</p>
 ####Arquitectura
 ![alt text](https://github.com/DavidPDP/LoadBalancer-Distribuidos/blob/master/images/diagrama_despliegue.png)
 
-##Objetivos 
+## Objetivos 
 * Realizar de forma autónoma el aprovisionamiento automático de infraestructura
 * Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables
 * Integrar servicios ejecutandose en nodos distintos
 
-##Supuestos
+## Supuestos
 <p align ='justify'> Se ha realizado la instalación de vagrant y del box del sistema operativo CentOS 6.5. También se ha puesto el box apuntar al mirror de CentOS y no a uno local.</p>
-##Desarrollo
+## Desarrollo
 <p align ='justify'>Para el desarrollo del problema se deben automatizar una serie de comandos, los siguientes son los comandos identificados para futura automatización</p>
-###Instalación de Nginx
+### Instalación de Nginx
 <p align ='justify'>Para el servidor que tomará el rol de balanceador de cargas se procederá a instalar el Nginx, el cual es un servidor web/proxy que permite múltiples funcionalidades, entre estas la funcionalidad de balanceo de carga. Para instalar Nginx se tiene que proceder a correr los siguientes comandos: </p>
 1.Accedemos hasta la carpeta de repositorios de yum
 ```sh
